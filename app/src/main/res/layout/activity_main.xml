@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.empire.dome.hbview.HBView
+        android:id="@+id/hb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="X:"
+        android:layout_marginStart="50dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/hb"/>
+
+    <EditText
+        android:id="@+id/ed_x"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:textSize="14sp"
+        android:inputType="number"
+        app:layout_constraintLeft_toRightOf="@+id/tvX"
+        app:layout_constraintTop_toBottomOf="@+id/hb"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Y:"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/hb"
+        app:layout_constraintLeft_toRightOf="@+id/ed_x"/>
+
+    <EditText
+        android:id="@+id/ed_y"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:textSize="14sp"
+        android:inputType="number"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/hb"
+        app:layout_constraintLeft_toRightOf="@+id/tv_y" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="确定"
+        tools:ignore="MissingConstraints"
+        android:background="@android:color/holo_blue_bright"
+        app:layout_constraintLeft_toRightOf="@id/ed_y"
+        app:layout_constraintTop_toBottomOf="@+id/hb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
